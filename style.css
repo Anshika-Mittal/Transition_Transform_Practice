@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(16, 51, 91);
+}
+
+.box {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(16, 51, 91);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cardOne,
+.cardTwo,
+.cardThree {
+  height: 450px;
+  width: 350px;
+  border-radius: 20px;
+  perspective: 1000px;
+}
+
+.card-1, .card-2, .card-3 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.cardOne:hover .card-1, .cardTwo:hover .card-2, .cardThree:hover .card-3 {
+  transform: rotateY(180deg);
+}
+
+.card1-front,
+.card2-front,
+.card3-front,
+.card1-back,
+.card2-back,
+.card3-back {
+    height: 100%;
+    width: 100%;
+    height: 450px;
+    width: 350px;
+    background-color: beige;
+    border-radius: 20px;
+    position: absolute;
+    overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.card1-back,
+.card2-back,
+.card3-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  font-family: serif;
+
+    align-items: center;
+  transform: rotateY(180deg);
+}
+
+.card1-front,
+.card2-front,
+.card3-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+  font-family: serif;
+
+    justify-content: space-between;
+}
+
+h1{
+    color: #5D5C3A;
+  font-family: serif;
+
+}
+
+.card1-back>h2, .card2-back>h2, .card3-back>h2{
+    color: #8d7f36;
+  font-family: serif;
+  font-size: 28px;
+  text-decoration: solid;
+
+}
+
+h3{
+    color: rgb(43, 77, 4);
+  font-family: serif;
+
+}
+
+img {
+  border: 4px solid rgb(212, 212, 156);
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.card1-front>h2, .card2-front>h2, .card3-front>h2 {
+  margin: 4px;
+  color: rgb(43, 77, 4);
+  text-align: center;
+  font-family: serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.btn{
+    display: flex;
+}
+
+button {
+  background-color: rgb(238, 213, 53);
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  font-size: larger;
+  font-family: serif;
+  border: 2px solid salmon;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 1px salmon;
+  border: 2px solid salmon;
+}
